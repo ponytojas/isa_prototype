@@ -10,18 +10,25 @@
                 <v-spacer />
                 <v-tooltip bottom>
                   <template v-slot:activator="{ on }">
-                      <v-icon>mdi-soccer</v-icon>
+                    <v-icon>mdi-soccer</v-icon>
                   </template>
                 </v-tooltip>
               </v-toolbar>
               <v-card-text>
                 <v-form>
-                  <v-text-field label="Usuario" name="login" prepend-icon="person" type="text" />
+                  <v-text-field
+                    label="Usuario"
+                    color="success"
+                    name="login"
+                    prepend-icon="person"
+                    type="text"
+                  />
 
                   <v-text-field
                     id="password"
                     label="Contraseña"
                     name="password"
+                    color="success"
                     prepend-icon="lock"
                     type="password"
                   />
@@ -29,7 +36,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer />
-                <v-btn color="success">Entrar</v-btn>
+                <v-btn color="success" rounded>Entrar</v-btn>
               </v-card-actions>
             </v-card>
           </v-col>

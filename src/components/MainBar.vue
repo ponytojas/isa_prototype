@@ -7,7 +7,6 @@
       relative
       fixed
     >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
       <v-toolbar-title>Sistema Integral de Gestión del Arbitraje</v-toolbar-title>
 
