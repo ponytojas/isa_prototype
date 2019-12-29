@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # arbitros
 
 ## Project setup
