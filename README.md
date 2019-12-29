@@ -1,4 +1,5 @@
 # arbitros
+This is just a prototype on vue for Advanced Software Engineering subject
 
 ## Project setup
 ```
@@ -22,7 +23,6 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-=======
-# isa_prototype
-This is just a prototype on vue for Advanced Software Engineering subject
+
+
 
