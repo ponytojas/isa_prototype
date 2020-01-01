@@ -1,26 +1,15 @@
 <template>
-  <v-app>
-    <v-content>
-      <TopBar />
-      <CenterCard />
+  <v-app id="app">
+    <v-content transition="slide-x-transition">
+      <router-view />
     </v-content>
   </v-app>
 </template>
 
 <script>
-import CenterCard from './components/CenterCard.vue';
-import TopBar from './components/MainBar.vue';
-
 export default {
   name: 'App',
-
-  components: {
-    CenterCard,
-    TopBar,
-  },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
+
+<style></style>

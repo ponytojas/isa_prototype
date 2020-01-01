@@ -6,7 +6,7 @@
           <v-col cols="12" sm="8" md="4">
             <v-card class="elevation-12">
               <v-toolbar color="success" dark flat>
-                <v-toolbar-title>Inicio de sesión</v-toolbar-title>
+                <v-toolbar-title> de sesión</v-toolbar-title>
                 <v-spacer />
                 <v-tooltip bottom>
                   <template v-slot:activator="{ on }">
@@ -36,7 +36,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer />
-                <v-btn color="success" rounded>Entrar</v-btn>
+                <v-btn color="success" rounded to="/about">Login</v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
