@@ -6,7 +6,7 @@
           <v-col cols="12" sm="8" md="4">
             <v-card class="elevation-12">
               <v-toolbar color="success" dark flat>
-                <v-toolbar-title> de sesión</v-toolbar-title>
+                <v-toolbar-title>Inicio de sesión</v-toolbar-title>
                 <v-spacer />
                 <v-tooltip bottom>
                   <template v-slot:activator="{ on }">
@@ -15,19 +15,21 @@
                 </v-tooltip>
               </v-toolbar>
               <v-card-text>
-                <v-form>
+                <v-form ref="form" v-model="valid">
                   <v-text-field
                     label="Usuario"
                     color="success"
                     name="login"
+                    v-model="username"
+                    type="username"
                     prepend-icon="person"
-                    type="text"
                   />
 
                   <v-text-field
                     id="password"
                     label="Contraseña"
                     name="password"
+                    v-model="password"
                     color="success"
                     prepend-icon="lock"
                     type="password"
@@ -36,7 +38,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer />
-                <v-btn color="success" rounded to="/about">Login</v-btn>
+                <v-btn color="success" rounded @click="submit">Login</v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
@@ -50,6 +52,21 @@
 export default {
   props: {
     source: String,
+  },
+  data() {
+    return {
+      valid: false,
+      username: '',
+      password: '',
+    };
+  },
+  methods: {
+    submit() {
+      this.$store.dispatch('userLogin', {
+        username: this.username,
+        password: this.password,
+      });
+    },
   },
 };
 </script>
