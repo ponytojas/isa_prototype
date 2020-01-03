@@ -7,7 +7,7 @@
 
 <script>
 import CenterCard from '../components/CenterCard.vue';
-import TopBar from '../components/MainBar.vue';
+import TopBar from '../components/LoginBar.vue';
 
 export default {
   name: 'Login',
