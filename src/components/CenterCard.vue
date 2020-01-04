@@ -15,7 +15,7 @@
                 </v-tooltip>
               </v-toolbar>
               <v-card-text>
-                <v-form ref="form" v-model="valid">
+                <v-form ref="form" v-model="valid" @keyup.native.enter="submit">
                   <v-text-field
                     label="Usuario"
                     color="success"
@@ -23,6 +23,7 @@
                     v-model="username"
                     type="username"
                     prepend-icon="person"
+                    flat
                   />
 
                   <v-text-field
@@ -33,6 +34,7 @@
                     color="success"
                     prepend-icon="lock"
                     type="password"
+                    flat
                   />
                 </v-form>
               </v-card-text>
