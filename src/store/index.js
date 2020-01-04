@@ -35,13 +35,24 @@ export default new Vuex.Store({
         commit('setIsAuthenticated', true);
       }
       if (this.state.user !== null && this.state.user !== undefined && this.state.user !== '') {
-        router.push('/about');
+        router.push('/main');
       }
+    },
+    userLogout({ commit }) {
+      commit('setUser', '', 0);
+      commit('setIsAuthenticated', false);
+      router.push('/');
     },
   },
   getters: {
     isAuthenticated(state) {
       return state.user !== null && state.user !== undefined;
+    },
+    getUsername(state) {
+      return state.user;
+    },
+    getLevel(state) {
+      return state.userLevel;
     },
   },
 });
