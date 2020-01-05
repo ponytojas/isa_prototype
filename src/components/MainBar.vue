@@ -1,6 +1,6 @@
 <template>
-  <v-content>
-    <v-app-bar color="success" dark elevate-on-scroll="True" relative fixed>
+  <v-content style="margin: 20px">
+    <v-app-bar color="success" dark elevate-on-scroll="True" fixed >
       <v-toolbar-title>Sistema Integral de Gestión del Arbitraje</v-toolbar-title>
       <v-spacer />
       <v-menu
