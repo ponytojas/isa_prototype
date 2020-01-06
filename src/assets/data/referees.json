@@ -1,22 +1,122 @@
 [
-    "Javier Alberolas Rojas",
-    "Adrián Cordero Vega",
-    "Guillermo Cuadra Fernández",
-    "Ricardo de Burgos Bengoetxea",
-    "Carlos del Cerro Grande",
-    "Xavier Estrada Fernández",
-    "Jesús Gil Manzano",
-    "Pablo González Fuertes",
-    "José Luis González González",
-    "Alejandro Hernández Hernández",
-    "Santiago Jaime Lastre",
-    "Juan Martínez Munuera",
-    "Antonio Miguel Mateu Lahoz",
-    "David Medié Jiménez",
-    "Mario Melero López",
-    "José Luis Munuera Montero",
-    "Valentón Pizarro Gómez",
-    "Eduardo Prieto Iglesias",
-    "José María Sánchez Martínez",
-    "Cesar Soto Grado"
+    {
+        "nombre": "Javier Alberolas Rojas",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Adrián Cordero Vega",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Guillermo Cuadra Fernández",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Ricardo de Burgos Bengoetxea",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Carlos del Cerro Grande",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Xavier Estrada Fernández",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Jesús Gil Manzano",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Pablo González Fuertes",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "José Luis González González",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Alejandro Hernández Hernández",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Santiago Jaime Lastre",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Juan Martínez Munuera",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Antonio Miguel Mateu Lahoz",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "David Medié Jiménez",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Mario Melero López",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "José Luis Munuera Montero",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Valentón Pizarro Gómez",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Eduardo Prieto Iglesias",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "José María Sánchez Martínez",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    },
+    {
+        "nombre": "Cesar Soto Grado",
+        "dni": "",
+        "telefono": "",
+        "partido": 0
+    }
 ]
