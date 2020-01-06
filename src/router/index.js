@@ -20,6 +20,11 @@ const routes = [
     name: 'main',
     component: () => import('../views/Main.vue'),
   },
+  {
+    path: '/draw',
+    name: 'draw',
+    component: () => import('../views/MatchDraw.vue'),
+  },
 ];
 
 const router = new VueRouter({

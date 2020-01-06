@@ -14,7 +14,7 @@
 
           <v-card-actions>
             <v-spacer />
-            <v-btn :color='card.color' :dark='card.dark'> Entrar </v-btn>
+            <v-btn :color='card.color' :dark='card.dark' :to=card.path> Entrar </v-btn>
             <v-spacer />
           </v-card-actions>
         </v-card>
@@ -37,6 +37,7 @@ export default {
           color: '#E20D36',
           level: 4,
           dark: true,
+          path: '/draw',
         },
         {
           src:
