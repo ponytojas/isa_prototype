@@ -24,6 +24,9 @@
 </template>
 <script>
 export default {
+  props: {
+    level: Number,
+  },
   data() {
     return {
       cards: [
@@ -32,6 +35,7 @@ export default {
             'https://images.unsplash.com/photo-1500061228850-950b0dc792c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80',
           title: 'Realizar sorteo',
           color: '#E20D36',
+          level: 4,
           dark: true,
         },
         {
@@ -40,12 +44,14 @@ export default {
           title: 'Datos de equipos',
           color: '#FFB300',
           dark: false,
+          level: 1,
         },
         {
           src:
             'https://images.unsplash.com/photo-1568495262088-4289581907ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80',
           title: 'Datos árbitros',
           color: '#005744',
+          level: 1,
           dark: true,
         },
         {
@@ -53,6 +59,7 @@ export default {
             'https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3289&q=80',
           title: 'Sancionar equipo',
           color: '#1B97AD',
+          level: 4,
           dark: true,
         },
         {
@@ -60,6 +67,7 @@ export default {
             'https://images.unsplash.com/photo-1510936470381-68e4c0a5e24b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2255&q=80',
           title: 'Sancionar jugador',
           color: '#FFAFA2',
+          level: 4,
           dark: false,
         },
         {
@@ -67,6 +75,7 @@ export default {
             'https://images.unsplash.com/photo-1536353284924-9220c464e262?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80',
           title: 'Sancionar arbitro',
           color: '#EABD7D',
+          level: 4,
           dark: true,
         },
         {
@@ -74,10 +83,15 @@ export default {
             'https://images.unsplash.com/photo-1468779036391-52341f60b55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3321&q=80',
           title: 'Revisar histórico de temporadras',
           color: '#A5D620',
+          level: 1,
           dark: false,
         },
       ],
     };
+  },
+  beforeMount() {
+    const level = this.$store.getters.getLevel;
+    this.cards = this.cards.filter(el => el.level <= level);
   },
 };
 </script>
