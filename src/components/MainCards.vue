@@ -48,9 +48,25 @@ export default {
         },
         {
           src:
+            'https://images.unsplash.com/photo-1483861911361-57d334ad765b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3304&q=80',
+          title: 'Datos de jugador',
+          color: '#FFDB30',
+          level: 1,
+          dark: false,
+        },
+        {
+          src:
             'https://images.unsplash.com/photo-1568495262088-4289581907ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80',
           title: 'Datos árbitros',
           color: '#005744',
+          level: 1,
+          dark: true,
+        },
+        {
+          src:
+            'https://images.unsplash.com/photo-1473976345543-9ffc928e648d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3370&q=80',
+          title: 'Datos partido',
+          color: '#813BF6',
           level: 1,
           dark: true,
         },
@@ -80,11 +96,59 @@ export default {
         },
         {
           src:
+            'https://images.unsplash.com/photo-1524272332618-3a94122bb0c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80',
+          title: 'Sanciones activas e históricas',
+          color: '#0D2481',
+          level: 1,
+          dark: true,
+        },
+        {
+          src:
             'https://images.unsplash.com/photo-1468779036391-52341f60b55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3321&q=80',
           title: 'Revisar histórico de temporadras',
           color: '#A5D620',
           level: 1,
           dark: false,
+        },
+        {
+          src:
+            'https://images.unsplash.com/photo-1566125882500-87e10f726cdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80',
+          title: 'Notificar ausencia',
+          color: '#FF0509',
+          level: 1,
+          dark: true,
+        },
+        {
+          src:
+            'https://images.unsplash.com/photo-1527345931282-806d3b11967f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80',
+          title: 'Subir acta',
+          color: '#F1B0F2',
+          level: 1,
+          dark: false,
+        },
+        {
+          src:
+            'https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2253&q=80',
+          title: 'Modificar y cerrar actas',
+          color: '#484855',
+          level: 1,
+          dark: true,
+        },
+        {
+          src:
+            'https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2653&q=80',
+          title: 'Revisar histórico de actas',
+          color: '#E79723',
+          level: 1,
+          dark: true,
+        },
+        {
+          src:
+            'https://images.unsplash.com/photo-1575312751568-e65bb1f7e927?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2172&q=80',
+          title: 'Finalizar temporada y reiniciar datos',
+          color: '#000000',
+          level: 5,
+          dark: true,
         },
       ],
     };
