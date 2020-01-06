@@ -1,8 +1,8 @@
 <template>
     <v-content>
-      <TopBar />
+      <TopBar :username="this.username" :level="this.level" />
       <v-spacer />
-      <Cards />
+      <Cards :levelProp="this.level" />
     </v-content>
 </template>
 
@@ -16,6 +16,17 @@ export default {
   components: {
     TopBar,
     Cards,
+  },
+  data() {
+    return {
+      level: 0,
+      username: '',
+    };
+  },
+  mounted() {
+    this.username = this.$store.getters.getUsername;
+    this.username = this.username.charAt(0).toUpperCase() + this.username.slice(1);
+    this.level = this.$store.getters.getLevel;
   },
 };
 </script>
