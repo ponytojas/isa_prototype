@@ -11,9 +11,11 @@ export default new Vuex.Store({
     userLevel: 0,
   },
   mutations: {
-    setUser(state, username, userLevel) {
+    setUser(state, username) {
       state.user = username;
-      state.userLevel = userLevel;
+    },
+    setLevel(state, level) {
+      state.userLevel = level;
     },
     setIsAuthenticated(state, payload) {
       state.isAuthenticated = payload;
@@ -22,16 +24,20 @@ export default new Vuex.Store({
   actions: {
     userLogin({ commit }, { username, password }) {
       if (username === 'admin' && password === 'admin') {
-        commit('setUser', username, 5);
+        commit('setUser', username);
+        commit('setLevel', 5);
         commit('setIsAuthenticated', true);
       } else if (username === 'arbitro' && password === 'arbitro') {
-        commit('setUser', username, 2);
+        commit('setUser', username);
+        commit('setLevel', 2);
         commit('setIsAuthenticated', true);
       } else if (username === 'federacion' && password === 'federacion') {
-        commit('setUser', username, 3);
+        commit('setUser', username);
+        commit('setLevel', 4);
         commit('setIsAuthenticated', true);
       } else if (username === 'liga' && password === 'liga') {
-        commit('setUser', username, 4);
+        commit('setUser', username);
+        commit('setLevel', 3);
         commit('setIsAuthenticated', true);
       }
       if (this.state.user !== null && this.state.user !== undefined && this.state.user !== '') {
