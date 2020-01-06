@@ -1,5 +1,5 @@
 <template>
-  <v-content style="margin: 20px">
+  <v-content style="margin: 30px">
     <v-app-bar color="success" dark elevate-on-scroll="True" fixed >
       <v-toolbar-title>Sistema Integral de Gestión del Arbitraje</v-toolbar-title>
       <v-spacer />
