@@ -9,7 +9,7 @@
                 <v-toolbar-title>Inicio de sesión</v-toolbar-title>
                 <v-spacer />
                 <v-tooltip bottom>
-                  <template v-slot:activator="{ on }">
+                  <template>
                     <v-icon>mdi-soccer</v-icon>
                   </template>
                 </v-tooltip>

@@ -156,7 +156,7 @@ export default {
   },
   beforeMount() {
     const level = this.$store.getters.getLevel;
-    this.cards = this.cards.filter(el => el.level <= level);
+    this.cards = this.cards.filter((el) => el.level <= level);
   },
 };
 </script>
