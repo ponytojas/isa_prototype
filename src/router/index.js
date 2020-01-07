@@ -25,6 +25,21 @@ const routes = [
     name: 'draw',
     component: () => import('../views/MatchDraw.vue'),
   },
+  {
+    path: '/season',
+    name: 'season',
+    component: () => import('../views/Season.vue'),
+  },
+  {
+    path: '/teams',
+    name: 'teams',
+    component: () => import('../views/Teams.vue'),
+  },
+  {
+    path: '/referees',
+    name: 'referees',
+    component: () => import('../views/Referees.vue'),
+  },
 ];
 
 const router = new VueRouter({

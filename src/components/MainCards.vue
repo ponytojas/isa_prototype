@@ -41,35 +41,12 @@ export default {
         },
         {
           src:
-            'https://images.unsplash.com/photo-1475506631979-72412c606f4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80',
-          title: 'Datos de equipos',
-          color: '#FFB300',
-          dark: false,
-          level: 1,
-        },
-        {
-          src:
             'https://images.unsplash.com/photo-1483861911361-57d334ad765b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3304&q=80',
-          title: 'Datos de jugador',
+          title: 'Temporada Actual',
           color: '#FFDB30',
           level: 1,
           dark: false,
-        },
-        {
-          src:
-            'https://images.unsplash.com/photo-1568495262088-4289581907ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80',
-          title: 'Datos árbitros',
-          color: '#005744',
-          level: 1,
-          dark: true,
-        },
-        {
-          src:
-            'https://images.unsplash.com/photo-1473976345543-9ffc928e648d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3370&q=80',
-          title: 'Datos partido',
-          color: '#813BF6',
-          level: 1,
-          dark: true,
+          path: '/season',
         },
         {
           src:
@@ -106,7 +83,7 @@ export default {
         {
           src:
             'https://images.unsplash.com/photo-1468779036391-52341f60b55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3321&q=80',
-          title: 'Revisar histórico de temporadras',
+          title: 'Revisar histórico de temporadas',
           color: '#A5D620',
           level: 1,
           dark: false,
@@ -141,14 +118,6 @@ export default {
           title: 'Revisar histórico de actas',
           color: '#E79723',
           level: 1,
-          dark: true,
-        },
-        {
-          src:
-            'https://images.unsplash.com/photo-1575312751568-e65bb1f7e927?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2172&q=80',
-          title: 'Finalizar temporada y reiniciar datos',
-          color: '#000000',
-          level: 5,
           dark: true,
         },
       ],

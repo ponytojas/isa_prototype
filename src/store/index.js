@@ -49,6 +49,18 @@ export default new Vuex.Store({
       commit('setIsAuthenticated', false);
       router.push('/');
     },
+    homePage() {
+      router.push('/main');
+    },
+    seasonPage() {
+      router.push('/season');
+    },
+    teamsPage() {
+      router.push('/teams');
+    },
+    refereePage() {
+      router.push('/referees');
+    },
   },
   getters: {
     isAuthenticated(state) {

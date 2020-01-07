@@ -1,0 +1,84 @@
+<template>
+  <v-container class='fill-height' fluid>
+    <v-row align='center' justify='center'>
+      <v-col v-for='card in cards' :key='card.title' :cols='12' sm='6' md='4'>
+        <v-card>
+          <v-img
+            :src='card.src'
+            class='white--text align-end'
+            gradient='to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)'
+            height='200px'
+          >
+            <v-card-title v-text='card.title'></v-card-title>
+          </v-img>
+
+          <v-card-actions>
+            <v-spacer />
+            <v-btn :color='card.color' :dark='card.dark' :to=card.path> Entrar </v-btn>
+            <v-spacer />
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+<script>
+export default {
+  props: {
+    level: Number,
+  },
+  data() {
+    return {
+      cards: [
+        {
+          src:
+            'https://images.unsplash.com/photo-1500061228850-950b0dc792c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80',
+          title: 'Realizar sorteo',
+          color: '#E20D36',
+          level: 4,
+          dark: true,
+          path: '/draw',
+        },
+        {
+          src:
+            'https://images.unsplash.com/photo-1475506631979-72412c606f4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80',
+          title: 'Datos de equipos',
+          color: '#FFB300',
+          dark: false,
+          level: 1,
+          path: '/teams',
+        },
+        {
+          src:
+            'https://images.unsplash.com/photo-1568495262088-4289581907ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80',
+          title: 'Datos árbitros',
+          color: '#005744',
+          level: 1,
+          dark: true,
+          path: '/referees',
+        },
+        {
+          src:
+            'https://images.unsplash.com/photo-1473976345543-9ffc928e648d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3370&q=80',
+          title: 'Datos partido',
+          color: '#813BF6',
+          level: 1,
+          dark: true,
+        },
+        {
+          src:
+            'https://images.unsplash.com/photo-1575312751568-e65bb1f7e927?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2172&q=80',
+          title: 'Finalizar temporada y reiniciar datos',
+          color: '#000000',
+          level: 5,
+          dark: true,
+        },
+      ],
+    };
+  },
+  beforeMount() {
+    const level = this.$store.getters.getLevel;
+    this.cards = this.cards.filter((el) => el.level <= level);
+  },
+};
+</script>

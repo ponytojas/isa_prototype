@@ -2,7 +2,33 @@
   <v-content style="margin: 30px">
     <v-app-bar color="success" dark elevate-on-scroll="True" fixed >
       <v-toolbar-title>Sistema Integral de Gestión del Arbitraje</v-toolbar-title>
+      <v-btn @click="home" icon v-on="on">
+        <v-icon>home</v-icon>
+      </v-btn>
       <v-spacer />
+      <v-menu
+        center
+        offset-y
+      >
+        <template v-slot:activator="{ on }">
+          <v-btn icon v-on="on">
+            <v-icon>build </v-icon>
+          </v-btn>
+        </template>
+
+        <v-list two-line subheader width="100%">
+          <v-list-item>
+              <v-list-tile-content>
+                <v-btn>Añadir Componente </v-btn>
+              </v-list-tile-content>
+          </v-list-item>
+          <v-list-item @click="logOut">
+              <v-list-tile-content>
+                <v-btn>Quitar Componente</v-btn>
+              </v-list-tile-content>
+            </v-list-item>
+        </v-list>
+      </v-menu>
       <v-menu
         center
         offset-y
@@ -43,6 +69,9 @@ export default {
   methods: {
     logOut() {
       this.$store.dispatch('userLogout');
+    },
+    home() {
+      this.$store.dispatch('homePage');
     },
   },
 };
