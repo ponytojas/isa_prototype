@@ -3,16 +3,43 @@
       <TopBar :username="this.username" :level="this.level" />
       <v-spacer />
       <v-spacer />
+      <v-speed-dial v-model='fab' bottom right fixed direction='top'>
+         <template v-slot:activator>
+        <v-btn
+          v-model="fab"
+          color="blue darken-2"
+          dark
+          fab
+        >
+          <v-icon v-if="fab">mdi-close</v-icon>
+          <v-icon v-else>mdi-information-outline</v-icon>
+        </v-btn>
+      </template>
       <v-btn
-                color="pink"
-                dark
-                fixed
-                bottom
-                right
-                fab
-              >
-                <v-icon>edit</v-icon>
-              </v-btn>
+        fab
+        dark
+        small
+        color="green"
+      >
+        <v-icon>mdi-pencil</v-icon>
+      </v-btn>
+      <v-btn
+        fab
+        dark
+        small
+        color="indigo"
+      >
+        <v-icon>mdi-plus</v-icon>
+      </v-btn>
+      <v-btn
+        fab
+        dark
+        small
+        color="red"
+      >
+        <v-icon>mdi-delete</v-icon>
+      </v-btn>
+      </v-speed-dial>
     </v-content>
 </template>
 
