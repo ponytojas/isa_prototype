@@ -2,6 +2,17 @@
     <v-content>
       <TopBar :username="this.username" :level="this.level" />
       <v-spacer />
+      <v-spacer />
+      <v-btn
+                color="pink"
+                dark
+                fixed
+                bottom
+                right
+                fab
+              >
+                <v-icon>edit</v-icon>
+              </v-btn>
     </v-content>
 </template>
 
@@ -12,8 +23,6 @@ export default {
   name: 'Main',
 
   props: {
-    level: Number,
-    username: String,
     toSearch: String,
   },
 
@@ -21,9 +30,15 @@ export default {
     TopBar,
   },
   data() {
-    return {};
+    return {
+      level: 0,
+      username: '',
+    };
   },
   mounted() {
+    this.username = this.$store.getters.getUsername;
+    this.username = this.username.charAt(0).toUpperCase() + this.username.slice(1);
+    this.level = this.$store.getters.getLevel;
   },
 };
 </script>
