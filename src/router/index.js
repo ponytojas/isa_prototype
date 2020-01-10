@@ -25,6 +25,12 @@ const routes = [
     name: 'draw',
     component: () => import('../views/MatchDraw.vue'),
   },
+  {
+    path: '/data',
+    name: 'data',
+    props: true,
+    component: () => import('../views/Data.vue'),
+  },
 ];
 
 const router = new VueRouter({
