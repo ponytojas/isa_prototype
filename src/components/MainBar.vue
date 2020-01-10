@@ -1,6 +1,9 @@
 <template>
   <v-content style="margin: 30px">
     <v-app-bar color="success" dark elevate-on-scroll="True" fixed >
+      <v-btn icon v-on="on" @click="$router.push('/main')">
+        <v-icon>mdi-home-outline </v-icon>
+      </v-btn>
       <v-toolbar-title>Sistema Integral de Gestión del Arbitraje</v-toolbar-title>
       <v-spacer />
       <v-menu
