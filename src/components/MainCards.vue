@@ -14,7 +14,10 @@
 
           <v-card-actions>
             <v-spacer />
-            <v-btn :color='card.color' :dark='card.dark' :to=card.path> Entrar </v-btn>
+            <v-btn :color='card.color' :dark='card.dark'
+            @click='$router.push({name: card.path, params:{toSearch: card.info}})'>
+              Entrar
+            </v-btn>
             <v-spacer />
           </v-card-actions>
         </v-card>
@@ -37,7 +40,7 @@ export default {
           color: '#E20D36',
           level: 4,
           dark: true,
-          path: '/draw',
+          path: 'draw',
         },
         {
           src:
@@ -46,6 +49,8 @@ export default {
           color: '#FFB300',
           dark: false,
           level: 1,
+          path: 'data',
+          info: 'teams',
         },
         {
           src:
@@ -54,6 +59,8 @@ export default {
           color: '#FFDB30',
           level: 1,
           dark: false,
+          path: 'data',
+          info: 'players',
         },
         {
           src:
@@ -62,6 +69,8 @@ export default {
           color: '#005744',
           level: 1,
           dark: true,
+          path: 'data',
+          info: 'referees',
         },
         {
           src:
@@ -70,6 +79,8 @@ export default {
           color: '#813BF6',
           level: 1,
           dark: true,
+          path: 'data',
+          info: 'matches',
         },
         {
           src:
