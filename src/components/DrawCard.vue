@@ -5,12 +5,11 @@
         <v-card align-center align="center" justify="center">
           <v-card-title>Realizar Sorteo</v-card-title>
           <v-expansion-panels>
-            <v-expansion-panel :v-for='match in Matches'>
-              <v-expansion-panel-header>{{ match }}</v-expansion-panel-header>
+            <v-expansion-panel v-for="(item,i) in this.matchesArray" :key="i">
+              <v-expansion-panel-header>Jornada {{ i + 1}}</v-expansion-panel-header>
               <v-expansion-panel-content>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </v-expansion-panel-content>
             </v-expansion-panel>
           </v-expansion-panels>
@@ -25,11 +24,16 @@ import Matches from '../assets/data/matches.json';
 export default {
   data() {
     return {
-      Matches,
+      data: Matches,
+      matchesArray: [],
+      amount: 38,
     };
   },
+  beforeMount() {
+    this.matchesArray = Object.keys(this.data).map((i) => this.data[i]);
+  },
   mounted() {
-    console.log(Matches);
+    console.log(this.matchesArray);
   },
 };
 </script>
