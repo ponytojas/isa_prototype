@@ -11,7 +11,7 @@
                 <v-data-table justify='center'  align="center" disable-pagination
                 hide-default-footer :headers='headers' :items='value' />
                 <v-spacer />
-                <v-btn class='float-center' @click="assignation" color="#FA7268" dark>
+                <v-btn @click="assignation"  color="#FA7268" dark>
                 Realizar asignación
                 </v-btn>
               </v-expansion-panel-content>
@@ -33,6 +33,7 @@ export default {
       matchesArray: [],
       referees: [],
       amount: 38,
+      assigned: false,
       headers: [
         {
           text: 'Local',
@@ -64,13 +65,17 @@ export default {
   methods: {
     assignation() {
       for (let index = 0; index < this.amount; index += 1) {
-        this.fixtures.push([]);
+        const temp = [];
         for (let indexFixture = 0; indexFixture < 10; indexFixture += 1) {
-          let referee = this.referees[Math.floor(Math.random() * this.referees.length)];
-          while (this.fixtures[index].includes(referee)) {
-            referee = this.referees[Math.floor(Math.random() * this.referees.length)];
+          let referee = this.referees[Math.floor(Math.random() * this.referees.length)].nombre;
+          console.log(referee);
+          console.log(this.matchesArray[index][indexFixture]);
+          while (temp.includes(referee)) {
+            referee = this.referees[Math.floor(Math.random() * this.referees.length)].nombre;
           }
-          this.fixtures[index].push(referee);
+          console.log(this.matchesArray[index][indexFixture]);
+          this.matchesArray[index][indexFixture].arbitro = referee;
+          temp.push(referee);
         }
       }
     },
