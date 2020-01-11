@@ -5,11 +5,10 @@
         <v-card align-center align="center" justify="center">
           <v-card-title>Realizar Sorteo</v-card-title>
           <v-expansion-panels>
-            <v-expansion-panel v-for="(item,i) in this.matchesArray" :key="i">
-              <v-expansion-panel-header>Jornada {{ i + 1}}</v-expansion-panel-header>
+            <v-expansion-panel v-for="(value, index) in this.matchesArray" :key="index">
+              <v-expansion-panel-header>Jornada {{ index + 1 }}</v-expansion-panel-header>
               <v-expansion-panel-content>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <v-data-table disable-pagination :headers='headers' :items='value' />
               </v-expansion-panel-content>
             </v-expansion-panel>
           </v-expansion-panels>
@@ -27,14 +26,24 @@ export default {
       data: Matches,
       matchesArray: [],
       amount: 38,
+      headers: [
+        {
+          text: 'Local',
+          align: 'center',
+          sortable: false,
+          value: 'local',
+        },
+        {
+          text: 'Visitante',
+          value: 'visitante',
+        },
+      ],
     };
   },
   beforeMount() {
     this.matchesArray = Object.keys(this.data).map((i) => this.data[i]);
   },
-  mounted() {
-    console.log(this.matchesArray);
-  },
+  mounted() {},
 };
 </script>
 
