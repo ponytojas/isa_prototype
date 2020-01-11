@@ -8,7 +8,12 @@
             <v-expansion-panel v-for="(value, index) in this.matchesArray" :key="index">
               <v-expansion-panel-header>Jornada {{ index + 1 }}</v-expansion-panel-header>
               <v-expansion-panel-content>
-                <v-data-table disable-pagination :headers='headers' :items='value' />
+                <v-data-table justify='center'  align="center" disable-pagination
+                hide-default-footer :headers='headers' :items='value' />
+                <v-spacer />
+                <v-btn class='float-center' @click="assignation" color="#FA7268" dark>
+                Realizar asignación
+                </v-btn>
               </v-expansion-panel-content>
             </v-expansion-panel>
           </v-expansion-panels>
@@ -19,31 +24,57 @@
 </template>
 <script>
 import Matches from '../assets/data/matches.json';
+import Referees from '../assets/data/referees.json';
 
 export default {
   data() {
     return {
       data: Matches,
       matchesArray: [],
+      referees: [],
       amount: 38,
       headers: [
         {
           text: 'Local',
+          value: 'local',
           align: 'center',
           sortable: false,
-          value: 'local',
         },
         {
           text: 'Visitante',
           value: 'visitante',
+          align: 'center',
+          sortable: false,
+        },
+        {
+          text: 'Arbitro',
+          value: 'arbitro',
+          align: 'center',
+          sortable: false,
         },
       ],
+      fixtures: [],
     };
   },
   beforeMount() {
     this.matchesArray = Object.keys(this.data).map((i) => this.data[i]);
+    this.referees = Object.keys(Referees).map((i) => Referees[i]);
   },
   mounted() {},
+  methods: {
+    assignation() {
+      for (let index = 0; index < this.amount; index += 1) {
+        this.fixtures.push([]);
+        for (let indexFixture = 0; indexFixture < 10; indexFixture += 1) {
+          let referee = this.referees[Math.floor(Math.random() * this.referees.length)];
+          while (this.fixtures[index].includes(referee)) {
+            referee = this.referees[Math.floor(Math.random() * this.referees.length)];
+          }
+          this.fixtures[index].push(referee);
+        }
+      }
+    },
+  },
 };
 </script>
 
