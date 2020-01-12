@@ -3,7 +3,7 @@
     <v-layout row wrap align-center>
       <v-flex xs11 align-center align-content-center>
         <v-card align-center align="center" justify="center">
-          <v-card-title> {{ this.title }} </v-card-title>
+          <v-card-title> {{ actualTitle }} </v-card-title>
           <v-expansion-panels v-if="Object.values(route).includes('teams')">
             <v-expansion-panel v-for="(item,i) in this.arrayData" :key="i">
               <v-expansion-panel-header><b>{{ teamArray[i] }}</b></v-expansion-panel-header>
@@ -61,32 +61,28 @@ import Referees from '../assets/data/referees.json';
 export default {
   data() {
     const route = this.$route.params;
-    const manager = Managers;
-    let actualData = Object.values(route);
-    let actualTitle;
 
-    if (actualData.includes('teams')) {
-      actualTitle = 'Equipos';
-      actualData = Players;
-    } else if (actualData.includes('players')) {
-      actualTitle = 'Players';
-      actualData = Players;
-    } else if (actualData.includes('referees')) {
-      actualTitle = 'Referees';
-      actualData = Referees;
-    }
     return {
-      data: actualData,
-      manager,
-      title: actualTitle,
       route,
       amount: 38,
     };
   },
   beforeMount() {
-    this.arrayData = Object.keys(this.data).map((i) => this.data[i]);
-    this.arrayManager = Object.keys(this.manager).map((i) => this.manager[i].Entrenador);
-    this.teamArray = Object.keys(this.manager).map((i) => this.manager[i].Equipo);
+    const route = Object.values(this.route);
+    let actualData;
+    if (route.includes('teams')) {
+      this.title = 'Equipos';
+      actualData = Players;
+    } else if (route.includes('players')) {
+      this.title = 'Players';
+      actualData = Players;
+    } else if (route.includes('referees')) {
+      this.title = 'Referees';
+      actualData = Referees;
+    }
+    this.arrayData = Object.keys(actualData).map((i) => actualData[i]);
+    this.arrayManager = Object.keys(Managers).map((i) => Managers[i].Entrenador);
+    this.teamArray = Object.keys(Managers).map((i) => Managers[i].Equipo);
   },
   mounted() {
     console.log(this.teamsArray);
