@@ -11,7 +11,7 @@
             </v-card>
           </v-dialog>
           <v-card-title>Realizar Sorteo</v-card-title>
-          <v-expansion-panels  v-model="panel">
+          <v-expansion-panels v-model='close'>
             <v-expansion-panel v-for="(value, index) in this.matchesArray" :key="index">
               <v-expansion-panel-header>Jornada {{ index + 1 }}</v-expansion-panel-header>
               <v-expansion-panel-content>
@@ -27,6 +27,9 @@
         </v-card>
       </v-flex>
     </v-layout>
+    <v-snackbar v-model="snackbar"> Asignación realizada con exito
+      <v-btn color="pink" text @click="snackbar = false">Cerrar</v-btn>
+    </v-snackbar>
   </v-container>
 </template>
 <script>
@@ -42,6 +45,8 @@ export default {
       panel: [],
       amount: 38,
       dialog: false,
+      close: false,
+      snackbar: false,
       headers: [
         {
           text: 'Local',
@@ -73,6 +78,7 @@ export default {
   methods: {
     assignation() {
       this.dialog = true;
+      this.close = true;
       for (let index = 0; index < this.amount; index += 1) {
         const temp = this.referees.slice();
         temp.sort(() => 0.5 - Math.random());
@@ -84,6 +90,8 @@ export default {
       }
       this.dialog = false;
       this.$forceUpdate();
+      this.close = false;
+      this.snackbar = true;
     },
   },
 };
