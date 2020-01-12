@@ -2,6 +2,7 @@
     <v-content>
       <TopBar :username="this.username" :level="this.level" />
       <v-spacer />
+      <DataCard/>
       <v-spacer />
       <v-speed-dial v-model='fab' bottom right fixed direction='top'>
          <template v-slot:activator>
@@ -45,6 +46,7 @@
 
 <script>
 import TopBar from '../components/MainBar.vue';
+import DataCard from '../components/DataCard.vue';
 
 export default {
   name: 'Main',
@@ -55,6 +57,7 @@ export default {
 
   components: {
     TopBar,
+    DataCard,
   },
   data() {
     return {
