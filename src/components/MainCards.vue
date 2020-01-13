@@ -79,7 +79,7 @@ export default {
           color: '#813BF6',
           level: 1,
           dark: true,
-          path: 'data',
+          path: 'matches',
           info: 'matches',
         },
         {

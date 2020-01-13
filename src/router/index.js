@@ -37,6 +37,12 @@ const routes = [
     props: true,
     component: () => import('../views/Doc.vue'),
   },
+  {
+    path: '/matches',
+    name: 'matches',
+    props: true,
+    component: () => import('../views/Matches.vue'),
+  },
 ];
 
 const router = new VueRouter({
