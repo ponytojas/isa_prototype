@@ -133,8 +133,9 @@ export default {
         {
           src:
             'https://images.unsplash.com/photo-1527345931282-806d3b11967f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80',
-          title: 'Subir acta',
+          title: 'Escribir acta',
           color: '#F1B0F2',
+          path: 'doc',
           level: 1,
           dark: false,
         },

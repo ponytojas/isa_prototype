@@ -31,6 +31,12 @@ const routes = [
     props: true,
     component: () => import('../views/Data.vue'),
   },
+  {
+    path: '/doc',
+    name: 'doc',
+    props: true,
+    component: () => import('../views/Doc.vue'),
+  },
 ];
 
 const router = new VueRouter({
